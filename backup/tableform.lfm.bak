@@ -1,0 +1,33 @@
+object TableForm: TTableForm
+  Left = 403
+  Height = 438
+  Top = 71
+  Width = 332
+  Caption = 'TableForm'
+  ClientHeight = 438
+  ClientWidth = 332
+  LCLVersion = '1.0.12.0'
+  object DBGrid: TDBGrid
+    Left = 16
+    Height = 269
+    Top = 90
+    Width = 298
+    Color = clWindow
+    Columns = <>
+    DataSource = Datasource
+    TabOrder = 0
+  end
+  object SQLQuery: TSQLQuery
+    FieldDefs = <>
+    Database = MainForm.DBConnection
+    Transaction = MainForm.SQLTransaction
+    Params = <>
+    left = 24
+    top = 376
+  end
+  object Datasource: TDatasource
+    DataSet = SQLQuery
+    left = 73
+    top = 378
+  end
+end
